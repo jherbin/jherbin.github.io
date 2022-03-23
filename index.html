@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Squares & Sliders</title>
+</head>
+<body>
+    <form>
+        <label for="whiteSelector">
+            <input name ="squareSelector" id="whiteSelector" class="radio" type="radio">
+            <div onclick="squareSelection(event)" id="whiteIcon"></div>
+        </label>
+        <label for="redSelector">
+            <input name ="squareSelector" id="redSelector" class="radio" type="radio" checked >
+            <div onclick="squareSelection(event)" id="redIcon"></div>
+        </label>
+    </form>
+    <form id="whiteSize">
+        <label for="width">
+            <p>
+                Width: 
+                <input type="range" min="0" max="100" value="50" class="slider" id="whiteWidthSlider" oninput="slide(event)">
+                <span id="whiteWidthCounter"></span>
+            </p>
+        </label>
+        <label for="height">
+            <p>
+                Height: 
+                <input type="range" min="0" max="100" value="50" class="slider" id="whiteHeightSlider" oninput="slide(event)">
+                <span id="whiteHeightCounter"></span>
+            </p>
+            </label>
+        </form>
+    <span id="screenSizeContainer">
+        Your screen size is:
+    </span>
+    <form id="redSize">
+        <label for="width">
+            <p>
+                Width: 
+                <input type="range" min="0" class="slider" id="redWidthSlider" oninput="slide(event)">
+                <span id="redWidthCounter"></span>
+            </p>
+        </label>
+        <label for="height">
+            <p>
+                Height: 
+                <input type="range" min="0" class="slider" id="redHeightSlider" oninput="slide(event)">
+                <span id="redHeightCounter"></span>
+            </p>
+        </label>
+    </form>
+
+    <form id="redMove">
+        <label for="redLeft">
+            <p>
+                Left: 
+                <input type="range" min="0" class="slider" id="redLeftSlider" oninput="slide(event)">
+                <span id="redLeftCounter"></span>
+            </p>
+        </label>
+        <label for="redTop">
+            <p>
+                Top: 
+                <input type="range" min="0" class="slider" id="redTopSlider" oninput="slide(event)">
+                <span id="redTopCounter"></span>
+            </p>
+        </label>
+    </form>
+
+    <div id="whiteSquare">
+        <div id="redSquare">
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

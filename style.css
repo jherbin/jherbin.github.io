@@ -1,0 +1,66 @@
+body {
+  background-color: rgba(180, 156, 156, 0.233);
+}
+
+#whiteSquare {
+  background-color: aliceblue;
+  position: relative;
+}
+
+#redSquare {
+  background-color: red;
+  position: absolute;
+  opacity: 50%;
+}
+
+form {
+  display: inline-block;
+}
+
+#whiteIcon {
+  background-color: aliceblue;
+  height: 50px;
+  width: 50px;
+}
+
+#whiteIcon:hover {
+  background-color: rgb(193, 209, 223);
+}
+
+input:checked + #whiteIcon {
+  background-color: rgb(193, 209, 223);
+  border: 1px black solid;
+}
+
+input:checked + #redIcon {
+  background-color: rgb(167, 11, 11);
+  border: 1px black solid;
+}
+
+#redIcon {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  opacity: 50%;
+}
+
+#redIcon:hover {
+  background-color: rgb(167, 11, 11);
+}
+
+.radio {
+  position: absolute;
+  visibility: hidden;
+}
+
+label > div {
+  display: inline-block;
+}
+
+#whiteSize {
+  display: none;
+}
+
+#screenSizeContainer {
+  display: none;
+}
